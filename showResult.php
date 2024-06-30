@@ -7,7 +7,7 @@
     <style>
         body {
             padding: 20px;
-            background: linear-gradient(to right, black, grey); 
+            background:black; 
             color:white;
         }
         h1 {
