@@ -7,9 +7,13 @@
         <style>
             body{
                 padding:40px;
+                background: linear-gradient(to right, gray, lightgray); /* Linear gradient from left to right */
+            height: 100vh; /* Full viewport height */
+            font-family: Arial, sans-serif; /* Sets a default font */
             }
             h1{
                 text-align:center;
+                font-size: 3rem;
             }
             form{
                 max-width:600px;
@@ -30,11 +34,34 @@
             input[type="submit"]{
                 padding:10px;
             }
+            .btn{
+                margin:6px;
+        padding:12px;
+        background-color:black;
+        color:white;
+        border-radius:4px;
+        cursor: pointer;
+        border: 0;
+        width: 100%;
+        margin:auto;
+        
+        }
+        .btn:hover{
+        color: white;
+        background-color: darkblue;
+        
+       }
+       .btn_container{
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        text-align:center;
+       }
            
         </style>
 </head>
 <body>
-    <h1>Add A student Result</h1>
+    <h1>Add student Result</h1>
      <?php
     // database connection
     if($_SERVER["REQUEST_METHOD"]=="POST"){
@@ -89,7 +116,10 @@ echo "<p>Error:'.mysqli_error($connection)'</p>"; }
         <label for="embedded">Embedded:</label>
         <input type="number" id="embedded" name="embedded" required>
 
-        <input type="submit" value="Add Info">
+        <div class="btn_container">
+        <input class="btn" type="submit" value="Save Now">
+        </div>
+        
 
 
     </form>

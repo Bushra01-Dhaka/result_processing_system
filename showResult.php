@@ -7,6 +7,8 @@
     <style>
         body {
             padding: 20px;
+            background: linear-gradient(to right, black, grey); 
+            color:white;
         }
         h1 {
             text-align: center;
